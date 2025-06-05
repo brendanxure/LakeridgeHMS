@@ -5,6 +5,6 @@ export async function GET(req: Request, res: Response) {
   try {
     await connectDB();
   }catch(err){
-
+    console.log(err);
   }
 }
