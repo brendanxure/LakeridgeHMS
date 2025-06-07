@@ -47,6 +47,5 @@ patientSchema.pre('save', async function (next) {
     next();
 });
 
-const patient: Model<IPatient> = mongoose.model<IPatient>("Patient", patientSchema);
-
+const patient: Model<IPatient> = mongoose.models.Patient || mongoose.model<IPatient>("Patient", patientSchema);
 module.exports = patient;
