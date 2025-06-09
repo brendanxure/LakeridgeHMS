@@ -48,4 +48,4 @@ patientSchema.pre('save', async function (next) {
 });
 
 const patient: Model<IPatient> = mongoose.models.Patient || mongoose.model<IPatient>("Patient", patientSchema);
-module.exports = patient;
+export default patient;
