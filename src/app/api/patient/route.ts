@@ -11,6 +11,7 @@ export async function GET(req: Request, res: Response) {
       body._id = await getNextSequenceValue("Patient", "_id");
     }
     const response = await Patient.create(body);
+    response.save();
   }catch(err){
     console.log(err);
   }
