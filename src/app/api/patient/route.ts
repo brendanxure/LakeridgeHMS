@@ -12,6 +12,7 @@ export async function GET(req: Request, res: Response) {
     }
     const response = await Patient.create(body);
     response.save();
+    return NextResponse.json({success: true, data: response, status: 200});
   }catch(err){
     console.log(err);
   }
