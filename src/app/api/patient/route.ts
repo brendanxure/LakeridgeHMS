@@ -14,6 +14,7 @@ export async function GET(req: Request, res: Response) {
     response.save();
     return NextResponse.json({success: true, data: response, status: 200});
   }catch(err){
+    return NextResponse.json({success: false, error: e});
     console.log(err);
   }
 }
