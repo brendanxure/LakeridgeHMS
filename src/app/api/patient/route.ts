@@ -3,7 +3,7 @@ import connectDB from "@/config/mongoDBConnection";
 import { getNextSequenceValue } from "@/model/primaryIdCounter";
 import Patient from "../../../model/patient";
 
-export async function GET(req: Request, res: Response) {
+export async function POST(req: Request, res: Response) {
   try {
     await connectDB();
     const body = await req.json();
