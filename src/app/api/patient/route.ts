@@ -17,3 +17,7 @@ export async function POST(req: Request, res: Response) {
     return NextResponse.json({success: false, error: err});
   }
 }
+
+export async function GET(req:NextRequest,res:NextResponse){
+
+}
