@@ -22,6 +22,6 @@ export async function GET(req:NextRequest,res:NextResponse){
   try{
 
   }catch(err){
-
+    console.log(err);
   }
 }
