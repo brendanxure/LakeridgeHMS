@@ -20,7 +20,7 @@ export async function POST(req: Request, res: Response) {
 
 export async function GET(req:NextRequest,res:NextResponse){
   try{
-
+    await connectDB();
   }catch(err){
     console.log(err);
   }
