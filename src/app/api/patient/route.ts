@@ -21,7 +21,7 @@ export async function POST(req: Request, res: Response) {
 export async function GET(req:NextRequest,res:NextResponse){
   try{
     await connectDB();
-    const {searchParams} = new URL(request.url);
+    const {searchParams} = new URL(req.url);
   }catch(err){
     console.log(err);
   }
