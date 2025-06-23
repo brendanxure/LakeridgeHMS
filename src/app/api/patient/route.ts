@@ -22,6 +22,7 @@ export async function GET(req:NextRequest,res:NextResponse){
   try{
     await connectDB();
     const {searchParams} = new URL(req.url);
+    const id = searchParams.get("id");
   }catch(err){
     console.log(err);
   }
