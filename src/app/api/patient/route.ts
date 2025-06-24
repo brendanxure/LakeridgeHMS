@@ -25,5 +25,6 @@ export async function GET(req:NextRequest,res:NextResponse){
     const id = searchParams.get("id");
   }catch(err){
     console.log(err);
+    return NextResponse.json({success: false, error: err});
   }
 }
